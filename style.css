@@ -1,0 +1,15 @@
+.exportExcel{
+  padding: 5px;
+  border: 1px solid grey;
+  margin: 5px;
+  cursor: pointer;
+}
+
+body {
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+table{
+  width:100%;
+}
