@@ -60,8 +60,8 @@ function Excel() {
 async function getDatos(){
   const querySnapshot =  await onGetTask();
   return new Promise(resolve=>{
-     resolve(querySnapshot.forEach(async doc=>{
-          await getTours(doc.data().Tours,doc.data().Name,doc.data().Concierge,doc.data().FechaHoy,doc.data().In,doc.data().Out,doc.data().Tours);     
+     resolve(querySnapshot.forEach(doc=>{
+          getTours(doc.data().Tours,doc.data().Name,doc.data().Concierge,doc.data().FechaHoy,doc.data().In,doc.data().Out,doc.data().Tours);     
         }))
   });
         
@@ -84,8 +84,8 @@ function obtener(ID,Name,Concierge,FechaHoy,In,Out,Tours,querySnapshot){
                               <td>${Name}</td>
                               <td>${Concierge}</td>
                               <td>${FechaHoy}</td>
-                              <td>${In}</td>
-                              <td>${Out}</td>
+                              <td>${doc.data().In}</td>
+                              <td>${doc.data().Out}</td>
                               <td>${Tours}</td>
                               <td>${tr.Nombre}</td>
                               <td>${tr.Precio}</td>
